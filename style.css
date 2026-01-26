@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*:active{
+  outline: none;
+}
+html{
+  scroll-behavior: smooth;
+  height: max-content;
+}
+body{
+    font-family: "Montserrat",'Courier New',"Playfair Display", sans-serif;
+    }
+
+
+/* ---------------Navbar---------------- */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.right ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right ul li {
+    list-style: none;
+}
+.right a{
+  text-decoration: none;
+  color: black;
+}
+.left{
+    font-family: "Playfair Display", sans-serif;
+    cursor: default;
+    font-weight: 400;
+    font-size: large;
+}
+.left2{
+    font-family: "Playfair Display", sans-serif;
+    cursor: default;
+    font-weight: 400;
+    font-size: large;
+    text-align: center;
+    display: none;
+}
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2%;
+}
+.navbar li {
+  display: inline;
+  cursor: pointer;
+  padding: 5px 15px;
+  position: relative;
+}
+.navbar li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar li:hover::after {
+  transform: scaleX(1);
+}
+
+/* ..................home...........*/
+.homecon{
+  height: 80vh;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.logocon{
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
+.spencon{
+  width: 35%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.tot{
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+  font-size: 45px;
+}
+.week{
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+  font-size: 35px;
+}
+.imgcon{
+  width: 100%;
+  height: 90%;
+  background: url(images/home\ img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wdata{
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+#wdates{
+  font-size: 20px;
+  color: rgb(92, 92, 92);
+}
+.tdata{
+
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+
+}
+.add{
+  height: 70vh;
+  border-radius: 20px;
+  margin: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 15%;
+}
+
+.add h1{
+  font-weight: 400;
+  font-size: 90px;
+}
+#addamount{
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+  flex: 1;
+}
+#addbtn{
+  padding: 20px 40px;
+  border-radius: 10px;
+  background: rgb(56, 56, 56);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); 
+  color: white;
+  margin-left: 40px;
+}
+#addnote{
+  padding: 20px 60px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+  flex: 1;
+  width: 100%;
+}
+#addbtn:active{
+  background: rgb(0, 0, 0);
+}
+
+/* ................graph.........*/
+.graphtitle{
+  font-size: 50px;
+  padding-left: 20%;
+  padding-top: 40px;
+}
+.graph{
+  height: 80vh;
+  margin: 20px;
+  padding: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.datacon{
+  min-height: 90vh;
+  height: max-content;
+  margin: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dattitle{
+  font-size: 50px;
+  text-align: start;
+  font-weight: 300;
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+}
+.datcon{
+  min-height: 400px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px 0px;
+}
+#licontan{
+  width: 100%;
+}
+#licontan li{
+    min-width: 50%;
+    width: max-content;
+    list-style: none;
+    font-size: large;
+    padding: 12px 30px ;
+    user-select: none;
+    cursor: pointer;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#licontan li span{
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+.datsum{
+  width: 80%;
+  display: flex;
+  justify-content: space-centre;
+  align-items: start;
+  padding: 30px 0px;
+}
+.dcon{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tottit{
+  font-size: xx-large;
+}
+#totdat{
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+@media (max-width: 600px){
+  .navbar .left{
+    display: none;
+  }
+  .navbar{
+    justify-content: center;
+  }
+  .left2{
+    font-size: 40px;
+    display: block;
+  }
+  .logocon{
+    display: none;
+  }
+  .spencon{
+    min-width: max-content;
+    width: 100%;
+  }
+  .tdata{
+    font-size: 60px;
+  }
+  .tot{
+    font-size: 30px;
+  }
+  .wdata{
+    font-size: 40px;
+  }
+  .week{
+    font-size: 30px;
+  }
+  .add h1{
+    font-weight: 300;
+    font-size: 45px;
+  }
+  #addnote{
+    padding: 20px 25px;
+  }
+  .addup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #addamount{
+    padding: 20px 0px;
+    text-align: center;
+    width: 60%;
+  }
+  .add{
+    margin: 20px;
+    
+  }
+  #addbtn{
+    margin-left: 0;
+  }
+  .graphtitle{
+    font-size: 30px;
+    padding-left: 10%;
+    padding-top: 0;
+  }
+  .datacon{
+    min-height: 60vh;
+  }
+  .datcon{
+    min-height: 100px;
+  }
+  .dattitle{
+    font-size: 30px;
+
+  }
+  #licontan li{
+    min-width: 90%;
+    padding: 12px 0px;
+    font-size: smaller;
+  }
+  .graph{
+  height: 50vh;
+  margin: 20px;
+  padding: 20px 0px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .dcon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tottit{
+    font-size: 20px;
+  }
+  #totdat{
+    font-size: 30px;
+    font-weight: 400;
+  }
+}
+@media (max-width : 300px){
+ .left2{
+    font-size: 30px;
+    display: block;
+  } 
+  .navbar{
+    font-size: xx-small;
+  }
+  .week{
+    width: 100%;
+  }
+  .tot{
+    width: 100%;
+  }
+  #addnote{
+    padding: 20px 20px ;
+  }
+}

@@ -1,0 +1,84 @@
+Alright, clean **note-ready summary**, no extra noise 👇
+
+---
+
+## Expense Tracker Web App – Feature Summary
+
+**Purpose**
+
+* Built for mastering **HTML, CSS, and JavaScript**
+* No backend, no login, no edit option
+* Data stored locally using local Storage
+* One user per device
+
+---
+
+## Core Behavior
+
+* App automatically tracks expenses **from first use**
+* **Date is auto-detected (today only)** when adding an expense
+* Each purchase is stored as a **separate entry**
+
+---
+
+## Data Organization (Folder-like Structure)
+
+* **Month (current calendar month)**
+
+  * **Week (calendar weeks: Monday → Sunday)**
+
+    * **Day**
+
+      * List of individual expenses for that day
+
+---
+
+## Main Features
+
+1. **Add Expense**
+
+   * Amount
+   * Short note (reason for spending)
+   * Date is set automatically
+
+2. **Weekly Expense Total**
+
+   * Shows total spending for the current calendar week
+
+3. **Overall Expense Total**
+
+   * Shows total spending since the user first started using the app
+
+4. **Expense Navigation**
+
+   * User can navigate:
+
+     * Month → Week → Day
+   * View expenses stored at each level
+
+5. **Monthly Expense Graph**
+
+   * Bar graph showing **daily expenses of the current month**
+   * **All days of the month are shown**
+
+     * Days with no spending = **0**
+     * Future days = **0**
+   * No days are skipped (stable, guilt-free visualization)
+
+---
+
+## Technical Decisions
+
+* Uses **local Storage** only
+* No user accounts or multi-user separation
+* No expense editing (add + delete only, delete optional later)
+* Focus on clean JS logic and data handling
+
+---
+
+If you want, next we can:
+
+* convert this into a **clean data structure**
+* or turn this into a **step-by-step build plan**
+
+Just tell me.
