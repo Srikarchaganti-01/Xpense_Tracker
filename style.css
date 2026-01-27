@@ -229,6 +229,12 @@ body{
   justify-content: center;
   align-items: center;
 }
+.datnote{
+  font-size: xx-large;
+  text-align: start;
+  font-weight: 300;
+  width: 80%;
+}
 .dattitle{
   font-size: 50px;
   text-align: start;
@@ -356,7 +362,9 @@ body{
   }
   .dattitle{
     font-size: 30px;
-
+  }
+  .datnote{
+    font-size: medium;
   }
   #licontan li{
     min-width: 90%;
@@ -402,4 +410,5 @@ body{
   #addnote{
     padding: 20px 20px ;
   }
+
 }
