@@ -125,7 +125,7 @@ function addexpense(){
     span.textContent = amount.value;
 
     li.appendChild(span);
-    licontan.appendChild(li);
+    licontan.prepend(li);
 
     document.getElementById("tdata").textContent = "₹"+ total;
     document.getElementById("wdata").textContent = "₹" + weektot;
@@ -162,5 +162,6 @@ function showsaved() {
     licontan.innerHTML = localStorage.getItem("data3") || "";
     document.getElementById("totdat").textContent = total;
 }
+
 
 document.addEventListener("DOMContentLoaded", showsaved);
