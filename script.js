@@ -35,12 +35,10 @@ const myChart = new Chart(ctx, {
 
 
 
-
-
 const now = new Date();
 
-const day = now.getDate();              // 1–31
-const monthIndex = now.getMonth();      // 0–11
+const day = now.getDate();        
+const monthIndex = now.getMonth();
 const year = now.getFullYear();
 
 const monthNames = [
@@ -101,6 +99,7 @@ const licontan = document.getElementById("licontan");
 
 
 function addexpense(){
+
   if (note.value.trim() === ""||amount.value.trim() === "") {
         alert("Please write something");
         return;
@@ -113,7 +112,7 @@ function addexpense(){
     total +=  amt;
     weektot += amt;
 
-    Array(31).fill(0);
+
     yValues[day-1] += amt;
     myChart.data.datasets[0].data = yValues;
     myChart.update();
@@ -124,8 +123,11 @@ function addexpense(){
     let span = document.createElement("span");
     span.textContent = amount.value;
 
+    
     li.appendChild(span);
     licontan.prepend(li);
+
+    trimList(10);
 
     document.getElementById("tdata").textContent = "₹"+ total;
     document.getElementById("wdata").textContent = "₹" + weektot;
@@ -136,6 +138,15 @@ function addexpense(){
     amount.value = "";
     note.value = "";
 }
+
+
+function trimList(limit = 10) {
+  while (licontan.children.length > limit) {
+    licontan.lastElementChild.remove();
+  }
+}
+
+
 
 amount.addEventListener("keydown", e => {
   if (e.key === "Enter") {
@@ -160,8 +171,7 @@ function save() {
 
 function showsaved() {
     licontan.innerHTML = localStorage.getItem("data3") || "";
-    document.getElementById("totdat").textContent = total;
+    
 }
-
 
 document.addEventListener("DOMContentLoaded", showsaved);
