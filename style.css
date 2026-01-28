@@ -294,7 +294,12 @@ body{
   font-size: xx-large;
   font-weight: 500;
 }
-
+.copy{
+  margin: 20px;
+  text-align: center;
+  font-size: small;
+  font-weight: 300;
+}
 @media (max-width: 600px){
   .navbar .left{
     display: none;
@@ -392,6 +397,9 @@ body{
     font-size: 30px;
     font-weight: 400;
   }
+  .copy{
+    font-size: xx-small;
+  }
 }
 @media (max-width : 300px){
  .left2{
@@ -412,3 +420,4 @@ body{
   }
 
 }
+
