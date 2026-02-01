@@ -88,6 +88,16 @@ if (week !== lastWeek) {
   localStorage.setItem("data2", weektot);
 }
 
+const lastMonth = Number(localStorage.getItem("lastmonth"));
+if (lastMonth !== monthIndex) {
+  yValues = Array(31).fill(0);                       
+  localStorage.setItem("yValues", JSON.stringify(yValues));
+  localStorage.setItem("lastmonth", String(monthIndex));
+
+  myChart.data.datasets[0].data = yValues;         
+  myChart.update();
+}
+
 
 document.getElementById("tdata").textContent = "₹"+ total;
 document.getElementById("wdata").textContent = "₹" + weektot;
